@@ -107,18 +107,18 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex items-center  ">
-          <img src={logo} alt="Intandem Scholars Logo" className=" w-[100px]" />
+          <img src={logo} alt="Intandem Scholars Logo" className="w-[100px]  md:w-[130px] " />
           
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8 text-lg">
           <Link to="/" className="text-[#099BA4] font-medium hover:text-[#038A58]">
-            Home
+           HOME
           </Link>
           
           <Link to="/about" className=" text-gray-700 hover:text-[#07A2BB]">
-            About
+           ABOUT
           </Link>
          
 
@@ -205,7 +205,7 @@ const Navbar = () => {
               <img
                 src={logo1}
                 alt="Intandem Scholars Sidebar Logo"
-                className="h-[100px] object-contain zoom-effect "
+                className="h-[100px] object-contain zoom-effect  "
               />
             </div>
             <Link
@@ -215,22 +215,21 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <div className="border-b border-gray-200 px-6">
-              <button
-                onClick={toggleDropdown}
-                className="flex justify-between items-center w-full py-3 text-gray-700"
-              >
-                <span>Services</span>
-                {showDropdown ? <AiOutlineUp /> : <AiOutlineDown />}
-              </button>
-              {showDropdown && <div className="mt-2">{renderServicesDropdown()}</div>}
-            </div>
+            <Link
+              to="/about"
+              className=" py-3 px-6 border-b border-gray-200 hover:bg-[#07A2BB]"
+              onClick={toggleSidebar1}
+            >
+              ABOUT
+            </Link>
+          
+          
             <div className="border-b border-gray-200 px-6">
               <button
                 onClick={toggleDropdown1}
                 className="flex justify-between items-center w-full py-3 text-gray-700"
               >
-                <span>Study Abroad</span>
+                <span>COURSES</span>
                 {showDropdown1 ? <AiOutlineUp /> : <AiOutlineDown />}
               </button>
               {showDropdown1 && <div className="mt-2">{renderStudyAbroadDropdown()}</div>}
