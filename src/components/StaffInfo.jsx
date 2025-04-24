@@ -13,13 +13,13 @@ const StaffInfo = () => {
     {
       name: "XXX",
       description:
-        "",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
       image: doctor1,
     },
     {
-      name: "Dr. Mamata Subba, BPT",
+      name: "XXX",
       description:
-        "Physiotherapist\nNHPC: A-1743 PHY\nA dedicated physiotherapist committed to helping individuals restore, maintain, and improve their mobility, strength, and overall physical function.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.",
       image: doctor2,
     },
   ];

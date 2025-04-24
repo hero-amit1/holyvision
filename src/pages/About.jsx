@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import campusImage from "../assets/syringe.jpg";
+import campusImage from "../assets/555.jpeg";
 import PrincipalMessage from "../components/PricipalMessage";
 
 // Container animation
