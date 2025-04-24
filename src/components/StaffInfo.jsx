@@ -11,9 +11,9 @@ import doctor2 from "../assets/pharmacy.jpg";
 const StaffInfo = () => {
   const doctors = [
     {
-      name: "Dr. Ujjwal Dotel, MPT",
+      name: "XXX",
       description:
-        "Executive Director, Senior Consultant Physiotherapist\nNHPC: 242 PHY\nA dedicated, hardworking physiotherapist specialized in MSK & Sports Physiotherapy who believes in the application of updated knowledge into patient care. I believe applying what you have studied and learned into clinical practice helps not only the patient but also strengthens our professional foundation.",
+        "",
       image: doctor1,
     },
     {
