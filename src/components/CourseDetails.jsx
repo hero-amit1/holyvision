@@ -7,6 +7,8 @@ import usaImage from "../assets/nursing.jpg";
 import australiaFlag from "../assets/red.jpg";
 import canadaFlag from "../assets/medicine.jpg";
 import usaFlag from "../assets/syringe.jpg";
+import bgem from "../assets/caregiver.jpg";
+import agem from "../assets/help.jpg";
 
 
 
@@ -60,8 +62,8 @@ const CourseDetails = () => {
       link: "/pcl-in-nursing",
     },
     {
-      image: usaImage,
-      flag: usaFlag,
+      image:bgem,
+      flag: agem,
       title: "Caregiver Program",
       description:
       "Step into the world of caregiving with HVTC’s Caregiver Program — designed to equip you with the skills, compassion, and global readiness needed to support the elderly and vulnerable with dignity, respect, and professional care.",

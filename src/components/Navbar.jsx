@@ -9,7 +9,7 @@ import logo1 from '../assets/finallogo.jpeg'; // Sidebar logo
 import img1 from '../assets/facebook.png';
 import img2 from '../assets/googlemap.png';
 import img3 from '../assets/whatsapp.png';
-import img4 from '../assets/linkedin.png';
+
 
 const services = [
 
@@ -24,6 +24,7 @@ const abroad = [
   { path: '/pcl-in-general-medicine', label: 'PCL In General Medicine (HA)' },
   { path: '/diploma-in-pharmacy', label: 'Diploma In Pharmacy' },
   { path: '/pcl-in-nursing', label: 'PCL IN NURSING ' },
+  { path: '/caregiver-program', label: 'Caregiver Program' },
 
 ];
 
@@ -179,14 +180,7 @@ const Navbar = () => {
   >
     <img src={img3} alt="WhatsApp" className="h-[40px] w-[40px] object-contain" />
   </a>
-  <a
-    href="https://www.linkedin.com/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="hover:scale-110 transform transition-transform duration-300"
-  >
-    <img src={img4} alt="LinkedIn" className="h-[40px] w-[40px] object-contain" />
-  </a>
+  
 </div>
 
         </div>
@@ -275,7 +269,7 @@ const Navbar = () => {
     rel="noopener noreferrer"
     className="hover:scale-110 transform transition-transform duration-300"
   >
-    <img src={img4} alt="LinkedIn" className="h-[40px] w-[40px] object-contain" />
+   
   </a>
 </div>
 

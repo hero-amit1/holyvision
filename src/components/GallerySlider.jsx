@@ -6,13 +6,16 @@ import "swiper/css/effect-creative";
 import "swiper/css/autoplay";
 
 // 🖼️ Gallery Images (replace with your actual image paths)
-import img1 from "../assets/syringe.jpg";
-import img2 from "../assets/abt.jpg";
-import img3 from "../assets/medicine.jpg";
-import img4 from "../assets/gm.jpg";
+import img1 from "../assets/22222.jpeg";
+import img2 from "../assets/555.jpeg";
+import img3 from "../assets/999.jpeg";
+import img4 from "../assets/77.jpeg";
+import img5 from "../assets/333.jpeg";
+import img6 from "../assets/444.jpeg";
+import img7 from "../assets/4444.jpeg";
 
 const GallerySlider = () => {
-  const images = [img1, img2, img3, img4];
+  const images = [img1, img2, img3, img4,img5, img6, img7];
 
   return (
     <section className="w-full py-16 px-4 sm:px-6 bg-white">

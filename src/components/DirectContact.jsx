@@ -104,6 +104,7 @@ const DirectContactUs = () => {
                     <option value="PCL In General Medicine (HA)">PCL In General Medicine (HA)</option>
                     <option value="PCL In Nursing">PCL In Nursing</option>
                     <option value="Diploma in Pharmacy">Diploma in Pharmacy</option>
+                    <option value="Caregiver Program">Caregiver Program</option>
                   </select>
                 </div>
 

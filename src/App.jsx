@@ -4,7 +4,7 @@ import './App.css'; // Add this for styling
 import whatsappImage from './assets/whatsapp.png'; // Import WhatsApp image
 
 import Home from './pages/Home';
-import Contact from './pages/Contact';
+
 
 import About from './pages/About';
 
@@ -12,7 +12,10 @@ import About from './pages/About';
 import PclGeneralMedicinePage from './pages/GeneralMedicine';
 import PclNursingPage from './pages/PCLNursing';
 import DiplomaInPharmacyPage from './pages/DiplomaPharmacy';
-import Gallery from './pages/Gallery';
+
+import GalleryContent from './pages/Gallery';
+import ContactPage from './pages/ContactPage';
+import CaregiverProgramPage from './pages/Caregiver';
 
 
 
@@ -30,10 +33,11 @@ const App = () => {
           <Route path="/pcl-in-general-medicine" element={<PclGeneralMedicinePage />} />
           <Route path="/pcl-in-nursing" element={<PclNursingPage />} />
           <Route path="/diploma-in-pharmacy" element={<DiplomaInPharmacyPage />} />
+          <Route path="/caregiver-program" element={<CaregiverProgramPage />} />
          
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<ContactPage/>} />
           <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} /> 
+          <Route path="/gallery" element={<GalleryContent />} /> 
          
         
         

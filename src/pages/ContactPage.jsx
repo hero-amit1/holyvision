@@ -1,0 +1,23 @@
+import React from 'react'
+import Navbar from '../components/Navbar'
+import ContactusComponent from '../components/ContactusComponent';
+import DirectContactUs from '../components/DirectContact';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+
+const ContactPage = () => {
+  return (
+    <>
+<Navbar/>
+<div className='pt-[120px] mb-7'>
+<ContactusComponent />
+</div>
+<DirectContactUs/>
+<Contact/>
+<Footer/>
+
+    </>
+  )
+}
+
+export default ContactPage

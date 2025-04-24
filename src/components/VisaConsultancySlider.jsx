@@ -5,8 +5,9 @@ import { Autoplay } from "swiper/modules";
 
 // Import all consultancy-related images
 import consultancy1 from "../assets/jj.jpg";
-import consultancy2 from "../assets/abt.jpg";
-import consultancy3 from "../assets/dj.jpg";
+import consultancy2 from "../assets/55555.jpeg";
+import consultancy3 from "../assets/22222.jpeg";
+import consultancy4 from "../assets/333.jpeg";
 
 
 // Define the images in an array
@@ -14,6 +15,7 @@ const images = [
   { src: consultancy1, alt: "1" },
   { src: consultancy2, alt: "2" },
   { src: consultancy3, alt: "3" },
+  { src: consultancy4, alt: "4" },
   
 ];
 
