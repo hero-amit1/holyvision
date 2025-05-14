@@ -67,7 +67,7 @@ export default function NavbarWithSliderOverlay() {
             <img
               src={img}
               alt={`slide-${index}`}
-              className="w-full h-screen object-cover"
+              className=" w-full h-screen object-cover "
               loading="lazy"
             />
           </SwiperSlide>
