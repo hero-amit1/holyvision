@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// Images
-import australiaImage from "../assets/gm.jpg";
-import canadaImage from "../assets/pharmacy.jpg";
-import usaImage from "../assets/nursing.jpg";
-import australiaFlag from "../assets/red.jpg";
-import canadaFlag from "../assets/medicine.jpg";
-import usaFlag from "../assets/syringe.jpg";
-import bgem from "../assets/caregiver.jpg";
-import agem from "../assets/help.jpg";
+// Course Images
+import generalMedicineImg from "../assets/gm.webp";
+import pharmacyImg from "../assets/pharmacy.webp";
+import nursingImg from "../assets/nursing.webp";
+import caregiverImg from "../assets/caregiver.webp";
+
+// Course Icons (Flag Style)
+import generalMedicineIcon from "../assets/red.jpg";
+import pharmacyIcon from "../assets/medicine.jpg";
+import nursingIcon from "../assets/syringe.jpg";
+import caregiverIcon from "../assets/help.jpg";
 
 const CourseDetails = () => {
   const [visibleCards, setVisibleCards] = useState([]);
@@ -34,32 +36,32 @@ const CourseDetails = () => {
 
   const destinations = [
     {
-      image: australiaImage,
-      flag: australiaFlag,
+      image: generalMedicineImg,
+      flag: generalMedicineIcon,
       title: "PCL In General Medicine (HA)",
       description:
         "Step into the world of primary healthcare with PCL in General Medicine (HA) at HVTC — a dynamic program focused on clinical proficiency, preventive care, and hands-on experience to prepare versatile Health Assistants ready to serve communities.",
       link: "/pcl-in-general-medicine",
     },
     {
-      image: canadaImage,
-      flag: canadaFlag,
+      image: pharmacyImg,
+      flag: pharmacyIcon,
       title: "Diploma In Pharmacy",
       description:
         "Kickstart your pharmacy career with D. Pharm at HVTC — a future-ready program combining clinical skills, pharmaceutical science, and industry exposure to shape confident, competent healthcare professionals.",
       link: "diploma-in-pharmacy",
     },
     {
-      image: usaImage,
-      flag: usaFlag,
+      image: nursingImg,
+      flag: nursingIcon,
       title: "PCL In Nursing",
       description:
         "Begin your journey in healthcare with PCL in Nursing at HVTC — a comprehensive program blending compassionate care, clinical expertise, and real-world training to nurture skilled and empathetic nursing professionals.",
       link: "/pcl-in-nursing",
     },
     {
-      image: bgem,
-      flag: agem,
+      image: caregiverImg,
+      flag: caregiverIcon,
       title: "Caregiver Program",
       description:
         "Step into the world of caregiving with HVTC’s Caregiver Program — designed to equip you with the skills, compassion, and global readiness needed to support the elderly and vulnerable with dignity, respect, and professional care.",
@@ -71,11 +73,10 @@ const CourseDetails = () => {
     <div className="bg-gray-100 py-8 px-4 scroll-smooth">
       {/* Page Title */}
       <div className="text-center mb-10">
-      <h2 className="text-4xl font-bold animate-fadeIn text-center">
-  <span className="text-blue-700">Explore</span>{" "}
-  <span className="text-red-600">Our Courses</span>
-</h2>
-
+        <h2 className="text-4xl font-bold animate-fadeIn text-center">
+          <span className="text-blue-700">Explore</span>{" "}
+          <span className="text-red-600">Our Courses</span>
+        </h2>
         <p className="text-gray-600 mt-2">Your academic goals are waiting to be achieved</p>
       </div>
 
@@ -99,7 +100,7 @@ const CourseDetails = () => {
               <div className="absolute -bottom-5 right-5 bg-white rounded-full p-1 shadow-lg border-4 border-gray-200">
                 <img
                   src={destination.flag}
-                  alt={`${destination.title} Flag`}
+                  alt={`${destination.title} Icon`}
                   className="w-10 h-10 rounded-full object-contain"
                 />
               </div>

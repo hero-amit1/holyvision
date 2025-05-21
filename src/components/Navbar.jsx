@@ -7,8 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import logo from "../assets/finallogo3.png";
-import logo1 from "../assets/finallogo3.png"; // sidebar logo
+import logo from "../assets/finallogo3.webp";
+import logo1 from "../assets/finallogo3.webp"; // sidebar logo
 import img1 from "../assets/facebook.png";
 import img2 from "../assets/googlemap.png";
 import img3 from "../assets/whatsapp.png";
