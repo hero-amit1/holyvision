@@ -86,7 +86,7 @@ export default function NavbarWithSliderOverlay() {
               {showDropdown ? <AiOutlineUp /> : <AiOutlineDown />}
             </div>
             {showDropdown && (
-              <div className="absolute top-8 bg-white text-yellow-500 shadow-md rounded-md mt-2 w-64 z-50">
+              <div className="absolute top-8 bg-white text-yellow-800 shadow-md rounded-md mt-2 w-64 z-50">
                 {abroad.map(({ path, label }) => (
                   <Link key={path} to={path} className="block px-4 py-2 hover:bg-[#07A2BB]">
                     {label}
