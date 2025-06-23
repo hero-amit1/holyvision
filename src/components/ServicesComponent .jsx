@@ -1,52 +1,54 @@
 import React, { useEffect } from "react";
-import graduateImg from "../assets/career1.webp"; // Update with actual HVTC-related image
-import groupStudentsImg from "../assets/career2.webp"; // Update with actual HVTC-related image
+import graduateImg from "../assets/career1.webp";
+import groupStudentsImg from "../assets/career2.webp";
 
-const ServicesSection = () => {
+const ServicesComponent = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".fade-in, .scale-in");
-    elements.forEach((el) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-            }
-          });
-        },
-        { threshold: 0.3 }
-      );
-      observer.observe(el);
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect(); // Cleanup
   }, []);
 
+  const features = [
+    "Diverse Technical Programs: Nursing, General Medicine, Pharmacy, and Caregiver.",
+    "Modern Infrastructure: Labs, libraries, simulation rooms, digital resources.",
+    "Experienced Faculty: Clinical and industry experts guiding your journey.",
+    "Internship Opportunities: Hospitals, clinics, and pharmacies across Nepal.",
+    "Career Counseling: Job preparation and guidance for further studies.",
+    "CTEVT Affiliation: Recognized health diplomas with national credibility.",
+    "Student Support: Mentorship and personal counseling services.",
+    "Safe & Inclusive Campus: A nurturing academic environment in Kathmandu.",
+  ];
+
   return (
-    <div className="bg-gray-50 py-8 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+    <section className="bg-gray-50 py-12 px-6" aria-labelledby="hvtc-services">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
         {/* Text Section */}
         <div className="lg:w-1/2 fade-in opacity-0 transition-all duration-1000 ease-in-out">
-          <h1 className="text-4xl font-bold text-gray-800 mb-6 animate-textSlideIn">
-            Empower Your Career with HVTC
-          </h1>
+          <h2 id="hvtc-services" className="text-4xl font-bold text-gray-800 mb-6 animate-textSlideIn">
+            Empower Your Career with Holy Vision Technical Campus
+          </h2>
           <p className="text-lg text-gray-600 mb-6 animate-fadeIn">
-            At Holy Vision Technical Campus, we provide comprehensive technical education with personalized support for your academic and professional growth.
+            HVTC provides accredited healthcare and technical education in Nepal with modern facilities, practical training, and expert faculty.
           </p>
           <ul className="space-y-4">
-            {[
-              "Diverse Technical Programs: Including Nursing, General Medicine, Pharmacy, and Caregiver Program.",
-              "Modern Infrastructure: Labs, libraries, simulation rooms, and digital resources.",
-              "Experienced Faculty: Qualified instructors with clinical and industrial expertise.",
-              "Internship Opportunities: Placements in hospitals, health centers, and pharmacies.",
-              "Career Counseling: Guidance for job readiness and further education.",
-              "CTEVT Affiliation: Recognized diplomas with nationwide value.",
-              "Student Support Services: Academic mentoring and personal counseling.",
-              "Safe & Inclusive Campus: Supportive environment for holistic development.",
-            ].map((item, index) => (
+            {features.map((item, index) => (
               <li
                 key={index}
-                className="text-gray-700 font-medium flex items-start space-x-2 scale-in opacity-0 transition-all duration-700"
+                className="flex items-start space-x-2 text-gray-700 font-medium scale-in opacity-0 transition-all duration-700"
               >
-                <span className="text-green-600 font-semibold">•</span>
+                <span className="text-green-600 font-bold">•</span>
                 <span>{item}</span>
               </li>
             ))}
@@ -54,25 +56,20 @@ const ServicesSection = () => {
         </div>
 
         {/* Images Section */}
-        <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-1 gap-6">
-          {/* First Image */}
-          <div
-            className="scale-in opacity-0 transition-all duration-1000 ease-in-out w-full h-64 sm:h-48 bg-cover bg-center rounded-lg shadow-lg transform hover:scale-110 hover:rotate-3 transition-all duration-700"
-            style={{
-              backgroundImage: `url(${graduateImg})`,
-            }}
-          ></div>
-          {/* Second Image */}
-          <div
-            className="scale-in opacity-0 transition-all duration-1000 ease-in-out w-full h-64 sm:h-48 bg-cover bg-center rounded-lg shadow-lg transform hover:scale-110 hover:-rotate-3 transition-all duration-700"
-            style={{
-              backgroundImage: `url(${groupStudentsImg})`,
-            }}
-          ></div>
+        <div className="lg:w-1/2 grid gap-6">
+          {[graduateImg, groupStudentsImg].map((img, index) => (
+            <div
+              key={index}
+              className="scale-in opacity-0 w-full h-64 sm:h-48 bg-cover bg-center rounded-lg shadow-lg transform hover:scale-110 transition-all duration-700"
+              style={{ backgroundImage: `url(${img})` }}
+              role="img"
+              aria-label={index === 0 ? "HVTC Graduate" : "HVTC Students Group"}
+            ></div>
+          ))}
         </div>
       </div>
 
-      {/* Inline CSS for Animations */}
+      {/* Inline CSS for fade/scale animation */}
       <style>
         {`
           .fade-in {
@@ -83,7 +80,6 @@ const ServicesSection = () => {
             opacity: 1;
             transform: translateY(0);
           }
-
           .scale-in {
             opacity: 0;
             transform: scale(0.8);
@@ -92,47 +88,20 @@ const ServicesSection = () => {
             opacity: 1;
             transform: scale(1);
           }
-
           @keyframes textSlideIn {
-            from {
-              opacity: 0;
-              transform: translateX(-50px);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
           }
-
           @keyframes fadeIn {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
+            from { opacity: 0; }
+            to { opacity: 1; }
           }
-
-          .animate-textSlideIn {
-            animation: textSlideIn 1s ease-out forwards;
-          }
-
-          .animate-fadeIn {
-            animation: fadeIn 1.5s ease-out forwards;
-          }
-
-          @media (max-width: 768px) {
-            .lg\\:w-1\\/2 {
-              width: 100%;
-            }
-            .grid-cols-1 {
-              grid-template-columns: 1fr;
-            }
-          }
+          .animate-textSlideIn { animation: textSlideIn 0.8s ease-out forwards; }
+          .animate-fadeIn { animation: fadeIn 1.2s ease-out forwards; }
         `}
       </style>
-    </div>
+    </section>
   );
 };
 
-export default ServicesSection;
+export default ServicesComponent;
