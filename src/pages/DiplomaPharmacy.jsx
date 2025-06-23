@@ -9,6 +9,25 @@ import NavbarMain from "../components/NavbarMain";
 const DiplomaInPharmacyPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // SEO Meta Tags
+    const head = document.head;
+
+    const title = document.createElement("title");
+    title.innerText = "Diploma in Pharmacy | Holy Vision Technical Campus, Kathmandu - CTEVT";
+    head.appendChild(title);
+
+    const metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    metaDesc.content =
+      "Join the Diploma in Pharmacy (D. Pharm) at Holy Vision Technical Campus in Kathmandu. Gain hands-on training and prepare for roles as Assistant Pharmacist, Sales Rep, Hospital Pharmacist, and more. CTEVT-affiliated with affordable fees.";
+    head.appendChild(metaDesc);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "Diploma in Pharmacy Nepal, D. Pharm Kathmandu, Pharmacy Course Nepal, CTEVT Pharmacy Course, Pharmacy College Nepal, Holy Vision Technical Campus Pharmacy, Assistant Pharmacist Program";
+    head.appendChild(metaKeywords);
   }, []);
 
   return (
@@ -80,7 +99,6 @@ const DiplomaInPharmacyPage = () => {
           </motion.h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* First Year */}
             <div className="bg-green-50 p-6 rounded-lg shadow-md">
               <h4 className="font-semibold text-lg text-green-800 mb-2">First Year</h4>
               <ul className="list-disc list-inside text-gray-700 text-sm">
@@ -95,8 +113,6 @@ const DiplomaInPharmacyPage = () => {
                 <li>Anatomy & Physiology</li>
               </ul>
             </div>
-
-            {/* Second Year */}
             <div className="bg-green-50 p-6 rounded-lg shadow-md">
               <h4 className="font-semibold text-lg text-green-800 mb-2">Second Year</h4>
               <ul className="list-disc list-inside text-gray-700 text-sm">
@@ -109,8 +125,6 @@ const DiplomaInPharmacyPage = () => {
                 <li>Public Health Pharmacy</li>
               </ul>
             </div>
-
-            {/* Third Year */}
             <div className="bg-green-50 p-6 rounded-lg shadow-md">
               <h4 className="font-semibold text-lg text-green-800 mb-2">Third Year</h4>
               <ul className="list-disc list-inside text-gray-700 text-sm">
@@ -137,7 +151,6 @@ const DiplomaInPharmacyPage = () => {
               <li>Practical experience in drug formulation and compounding</li>
             </ul>
           </div>
-
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h4 className="text-xl font-semibold text-green-700 mb-4">Facilities</h4>
             <ul className="list-disc list-inside text-gray-700 text-sm leading-relaxed">

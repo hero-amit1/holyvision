@@ -42,6 +42,25 @@ const hoverEffect = {
 export default function AboutPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    // SEO Meta Tag Injection
+    const head = document.head;
+
+    const title = document.createElement("title");
+    title.innerText = "About | Holy Vision Technical Campus – Best CTEVT College in Kathmandu";
+    head.appendChild(title);
+
+    const metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    metaDesc.content =
+      "Discover the mission, academic excellence, faculty expertise, and future opportunities at Holy Vision Technical Campus – Nepal’s trusted CTEVT affiliated healthcare college since 2002.";
+    head.appendChild(metaDesc);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "Holy Vision, HVTC, About Holy Vision, CTEVT college Kathmandu, Nursing College Nepal, Best Healthcare College, Diploma Pharmacy Nepal, Health Assistant Kathmandu, Caregiver Program Nepal, Best Technical Campus";
+    head.appendChild(metaKeywords);
   }, []);
 
   return (
@@ -56,14 +75,14 @@ export default function AboutPage() {
       >
         {/* Hero Section */}
         <motion.div variants={itemVariants} className="text-center space-y-4">
-        <motion.h1
-  className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-yellow-400 to-red-500 "
-  initial={{ scale: 0.9, opacity: 0 }}
-  animate={{ scale: 1, opacity: 1 }}
-  transition={{ delay: 0.2, type: "spring" }}
->
-  Welcome to Holy Vision Technical Campus
-</motion.h1>
+          <motion.h1
+            className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-yellow-400 to-red-500 "
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2, type: "spring" }}
+          >
+            Welcome to Holy Vision Technical Campus
+          </motion.h1>
 
           <motion.p
             className="text-lg text-gray-600"
@@ -104,7 +123,7 @@ export default function AboutPage() {
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={containerVariants}
           >
-            {[
+            {[ 
               { icon: "🩺", title: "PCL in Nursing (Staff Nurse)" },
               { icon: "👨‍⚕️", title: "General Medicine (Health Assistant)" },
               { icon: "💊", title: "Diploma in Pharmacy" },

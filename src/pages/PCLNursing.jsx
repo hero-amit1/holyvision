@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import ParticularDirectContactUs from "../components/ParticularDirectContactUs";
 import nursingImage from "../assets/syringe.jpg"; // Replace with actual image path
@@ -9,6 +9,25 @@ import NavbarMain from "../components/NavbarMain";
 const PclNursingPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // SEO Meta Tags
+    const head = document.head;
+
+    const title = document.createElement("title");
+    title.innerText = "PCL in Nursing | Holy Vision Technical Campus, Kathmandu - CTEVT";
+    head.appendChild(title);
+
+    const metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    metaDesc.content =
+      "Join the PCL in Nursing program at Holy Vision Technical Campus in Kathmandu. Gain clinical experience, compassionate care training, and prepare for roles like Staff Nurse, Midwife, and Community Health Nurse. CTEVT-affiliated and affordable.";
+    head.appendChild(metaDesc);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "PCL in Nursing Nepal, Nursing College Kathmandu, Staff Nurse Training Nepal, CTEVT Nursing Course, Holy Vision Technical Campus Nursing, Nursing Education Nepal";
+    head.appendChild(metaKeywords);
   }, []);
 
   return (

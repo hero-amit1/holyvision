@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import ParticularDirectContactUs from "../components/ParticularDirectContactUs";
 import caregiverImage from "../assets/caregiver.jpg"; // Replace with actual image path
@@ -9,6 +9,25 @@ import NavbarMain from "../components/NavbarMain";
 const CaregiverProgramPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // SEO Meta Tags
+    const head = document.head;
+
+    const title = document.createElement("title");
+    title.innerText = "Caregiver Program | Holy Vision Technical Campus - CTEVT Nepal";
+    head.appendChild(title);
+
+    const metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    metaDesc.content =
+      "Enroll in the Caregiver Program at Holy Vision Technical Campus, Nepal. Gain practical training, global job readiness, and compassionate care skills. CTEVT affiliated, 1-year duration, affordable fees.";
+    head.appendChild(metaDesc);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "Caregiver Program Nepal, Holy Vision Caregiver, Elderly Care Training Nepal, CTEVT Caregiver Course, Caregiving Course Nepal, International Caregiver Jobs, Caregiver College Nepal";
+    head.appendChild(metaKeywords);
   }, []);
 
   return (

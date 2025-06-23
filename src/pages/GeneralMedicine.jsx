@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Navbar from "../components/Navbar";
+
 import Footer from "../components/Footer";
 import ParticularDirectContactUs from "../components/ParticularDirectContactUs";
 import generalMedicineImage from "../assets/gm.jpg"; // Use correct image
@@ -9,6 +9,25 @@ import NavbarMain from "../components/NavbarMain";
 const PclGeneralMedicinePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    // SEO Meta Tag Injection
+    const head = document.head;
+
+    const title = document.createElement("title");
+    title.innerText = "PCL in General Medicine (HA) | Holy Vision Technical Campus – CTEVT Health Assistant Program in Nepal";
+    head.appendChild(title);
+
+    const metaDesc = document.createElement("meta");
+    metaDesc.name = "description";
+    metaDesc.content =
+      "Enroll in the PCL in General Medicine (Health Assistant) program at Holy Vision Technical Campus. Get hands-on clinical training, modern labs, and CTEVT affiliation for a strong medical career in Nepal.";
+    head.appendChild(metaDesc);
+
+    const metaKeywords = document.createElement("meta");
+    metaKeywords.name = "keywords";
+    metaKeywords.content =
+      "PCL General Medicine, Health Assistant Nepal, CTEVT Medical Courses, HA program Kathmandu, Holy Vision HA, General Medicine College Nepal, CTEVT affiliated courses, Practical medical training Nepal";
+    head.appendChild(metaKeywords);
   }, []);
 
   return (
