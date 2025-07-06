@@ -29,7 +29,7 @@ const navLinks = [
   { path: "/gallery", label: "GALLERY" },
 ];
 
-const images = [slide2, slide3,slide4];
+const images = [slide2, slide3, slide4];
 
 export default function NavbarWithSliderOverlay() {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -67,7 +67,7 @@ export default function NavbarWithSliderOverlay() {
             <img
               src={img}
               alt={`slide-${index}`}
-              className=" w-full h-screen object-cover "
+              className="w-full h-screen object-cover"
               loading="lazy"
             />
           </SwiperSlide>
@@ -76,7 +76,10 @@ export default function NavbarWithSliderOverlay() {
 
       {/* Top Navbar */}
       <nav className="absolute top-0 left-0 w-full px-4 sm:px-6 md:px-10 py-4 flex justify-between items-center z-10">
-        <img src={logo} alt="Logo" className="w-[60px] sm:w-[100px] md:w-[130px]" />
+        <Link to="/" onClick={() => window.location.reload()}>
+          <img src={logo} alt="Logo" className="w-[60px] sm:w-[100px] md:w-[130px] cursor-pointer" />
+        </Link>
+
         <div className="hidden lg:flex gap-8 items-center text-md text-white font-extrabold">
           <Link to="/" className="hover:text-blue-400">HOME</Link>
           <Link to="/about" className="hover:text-blue-400">ABOUT</Link>
@@ -126,7 +129,9 @@ export default function NavbarWithSliderOverlay() {
             onClick={toggleSidebar}
           />
           <div className="flex justify-center my-6">
-            <img src={logo1} alt="Sidebar Logo" className="h-[80px] object-contain" />
+            <Link to="/" onClick={() => window.location.reload()}>
+              <img src={logo1} alt="Sidebar Logo" className="h-[80px] object-contain cursor-pointer" />
+            </Link>
           </div>
           <nav className="flex flex-col px-4 gap-1">
             <Link to="/" className="text-[#099BA4] font-semibold py-3 border-b border-gray-200 hover:bg-gray-100 rounded" onClick={toggleSidebar}>Home</Link>
