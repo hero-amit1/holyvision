@@ -16,15 +16,15 @@ const BoardOfDirectors = () => {
     },
     {
       name: "Dr. Moni Mahto",
-      role: `Director\nConsultant Micro Biologist\nInterprete Nepal\nBoard Member of \nEverest Hospital`,
+      role: `Director\nConsultant Micro Biologist\nInterprete Nepal\nBoard Member of Everest Hospital`,
     },
     {
       name: "Dr. Sumitra Nakarmi",
-      role: `Director\nMember of\nSocial Welfare Council`,
+      role: `Director\nMember of Social Welfare Council`,
     },
     {
       name: "Mrs. Amrita Mahaseth",
-      role: `Director\nBoard Member of\nEverest Hospital`,
+      role: `Director\nBoard Member of Everest Hospital`,
     },
     {
       name: "Mrs. Urmila Bhattarai Baral",
