@@ -2,31 +2,47 @@ import React from "react";
 
 const BoardOfDirectors = () => {
   const directors = [
-    { name: "Dipak Chandra Baral", role: "Chairman, Holyvision Technical Campus" },
-    { name: "Dr. Tulshi Das Shrestha", role: "Executive Director" },
-    { name: "Dr. Soni Mahato", role: "Executive Director" },
-    { name: "Dr. Moni Mahto", role: "Board Member" },
-    { name: "Dr. Sumintra Nakarmi", role: "Board Member" },
-    { name: "Mrs. Amrita Mahaseth", role: "Board Member" },
-    { name: "Mrs. Urmila Bhattrai Baral", role: "Board Member" },
+    {
+      name: "Mr. Dipak Chandra Baral",
+      role: `Admin. Chief, Everest Hospital\nChairman, NIMS`,
+    },
+    {
+      name: "Asso. Prof. Dr. Tulsi Das Shrestha, T.U.",
+      role: `Board Member of Everest Hospital\nExecutive Director\nGeneral Secretary, NHAN`,
+    },
+    {
+      name: "Dr. Soni Mahato",
+      role: `Executive Director\nBoard Member of Everest Hospital\nTeam Expert, Social Welfare Council`,
+    },
+    {
+      name: "Dr. Moni Mahto",
+      role: `Director\nSenior Micro Biologist\nConsultant, Everest Hospital\nBoard Member of Social Welfare Council`,
+    },
+    {
+      name: "Dr. Sumitra Nakarmi",
+      role: `Director\nBoard Member of Everest Hospital\nSocial Welfare Council`,
+    },
+    {
+      name: "Mrs. Amrita Mahaseth",
+      role: `Director\nBoard Member of Everest Hospital`,
+    },
+    {
+      name: "Mrs. Urmila Bhattrai Baral",
+      role: `Director`,
+    },
   ];
 
   return (
-    <section className="bg-gradient-to-b from-blue-50 to-white py-8 px-4 sm:px-10">
-      <h2 className="text-4xl font-bold text-center mb-10">
-        <span className="text-blue-600">Board</span>{" "}
-        <span className="text-red-600">of Directors</span>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-red-500 mx-auto mt-2 rounded-full" />
-      </h2>
-
-      <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
+    <section className="py-12 px-4 sm:px-8 lg:px-16 bg-gray-50 text-gray-800">
+      <h2 className="text-3xl font-bold text-center mb-10">Board of Directors</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {directors.map((director, index) => (
           <div
             key={index}
-            className="bg-white rounded-2xl shadow-md px-6 py-8 w-full max-w-xs border border-blue-100 text-center"
+            className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition duration-300 ease-in-out"
           >
-            <div className="text-xl font-bold text-gray-800 mb-2">{director.name}</div>
-            <div className="text-sm text-gray-500">{director.role}</div>
+            <h3 className="text-xl font-semibold mb-2">{director.name}</h3>
+            <p className="text-sm text-gray-700 whitespace-pre-line">{director.role}</p>
           </div>
         ))}
       </div>
