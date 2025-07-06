@@ -173,18 +173,7 @@ const CaregiverProgramPage = () => {
           </ul>
         </section>
 
-        {/* Fee Section */}
-        <section className="mb-16 text-center">
-          <motion.h3
-            className="text-2xl font-bold text-green-700 mb-2"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
-          >
-            Total Fee: NPR 1,80,000/-
-          </motion.h3>
-          <p className="text-gray-600">Accessible and impactful caregiving education for all.</p>
-        </section>
+      
 
         {/* Why HVTC Section */}
         <section className="mb-20 bg-green-50 p-10 rounded-lg shadow text-center">
