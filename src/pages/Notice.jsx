@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import NavbarMain from "../components/NavbarMain";
 import Footer from "../components/Footer";
 import notice1 from "../assets/newnotice.jpeg";
+import notice2 from "../assets/update2.jpeg";
 
 
 const notices = [
   { src: notice1, file: "newnotice.jpeg" },
+  { src: notice2, file: "update2.jpeg" },
 
 ];
 
