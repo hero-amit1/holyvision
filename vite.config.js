@@ -1,30 +1,29 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
-import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    react(),
-    visualizer({ open: true })
+    react()
   ],
 
   build: {
-    chunkSizeWarningLimit: 1500, // remove 500kb warning
+    outDir: "dist",
+    chunkSizeWarningLimit: 1500,
 
     rollupOptions: {
       output: {
         manualChunks(id) {
-          // Split React
-          if (id.includes('react')) return 'react-vendor';
-
-          // Split node_modules into separate chunk
-          if (id.includes('node_modules')) return 'vendor';
-
-          // Allow Vite to handle the rest
+          if (id.includes("react")) return "react-vendor";
+          if (id.includes("node_modules")) return "vendor";
         }
       }
     }
+  },
+
+  server: {
+    host: true,
+    port: 5173
   }
-})
+});
