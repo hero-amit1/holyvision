@@ -15,14 +15,20 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
+          // Split ONLY big node modules
           if (id.includes("node_modules/react")) {
-            return "react-vendor";
+            return "react-vendor";  // React + ReactDOM
           }
           if (id.includes("node_modules")) {
-            return "vendor";
+            return "vendor";        // Other packages
           }
         }
       }
     }
+  },
+
+  server: {
+    host: true,
+    port: 5173
   }
 });
