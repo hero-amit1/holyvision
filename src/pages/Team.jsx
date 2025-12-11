@@ -8,7 +8,11 @@ import Footer from "../components/Footer";
 ---------------------------------------------------- */
 
 // ⭐ Academic Team Images
+<<<<<<< HEAD
 import vpImg from "../assets/Team/ViceprincipaL.jpeg";
+=======
+import vpImg from "../assets/Team/Viceprincipal.jpeg";
+>>>>>>> bc45de04a9e2df21854d4342e6432f2845819771
 import headAdmImg from "../assets/Team/headofadmissiondepartment.jpeg";
 import pharmacyCImg from "../assets/Team/Programcordinatordiploma.jpeg";
 import gmCImg from "../assets/Team/Programcordinatorpcl.jpeg";
